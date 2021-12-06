@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1 SoloDeportes Barrio Derqui
+  div.card-group
+    each product in products
+      div.card
+        img(src=`${product.img}`)
+        div.card-body
+          h5.card-tittle= product.name
+          p.card-text= product.description
+          p.card-text= product.price
+          button.btn.btn-primary(onclick = "comprar(event)") Comprar
